@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { CheckCircleIcon, SparklesIcon, WrenchIcon } from './Icons'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -53,17 +54,16 @@ export default function HowItWorks() {
 
   return (
     <section ref={sectionRef} className="py-28 px-6 relative overflow-hidden">
-      <div style={{ background: 'radial-gradient(ellipse 60% 70% at 0% 50%, rgba(168,85,247,0.07) 0%, transparent 60%)' }} className="absolute inset-0 pointer-events-none" />
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left */}
           <div>
             <div className="section-label mb-6">
-              <span>🔧</span> How it works
+              <WrenchIcon className="w-4 h-4" /> How it works
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-5 leading-tight">
               Up and running<br />
-              <span className="gradient-text">in minutes</span>
+              <span className="text-purple-300">in minutes</span>
             </h2>
             <p className="text-slate-400 text-base mb-10 leading-relaxed max-w-md">
               No lengthy onboarding. No complex setup. Connect your repo, configure your pipeline, and deploy to production in a single afternoon.
@@ -102,7 +102,10 @@ export default function HowItWorks() {
                 <div className="text-center py-4">
                   <p className="text-slate-500 text-xs mb-1 uppercase tracking-widest">Last Deploy</p>
                   <p className="text-4xl font-extrabold stat-num">2.4s</p>
-                  <span className="text-purple-400 text-sm font-semibold">✅ Deployed to prod — v3.8.1</span>
+                  <span className="text-purple-400 text-sm font-semibold inline-flex items-center justify-center gap-2">
+                    <CheckCircleIcon className="w-4 h-4" />
+                    Deployed to prod — v3.8.1
+                  </span>
                 </div>
 
                 {/* Progress bars */}
@@ -130,7 +133,10 @@ export default function HowItWorks() {
 
                 {/* Alerts */}
                 <div className="glass rounded-xl p-3 border border-white/6">
-                  <p className="text-slate-400 text-xs font-semibold mb-2">⚡ AI Insights</p>
+                  <p className="text-slate-400 text-xs font-semibold mb-2 inline-flex items-center gap-2">
+                    <SparklesIcon className="w-4 h-4 text-purple-400" />
+                    AI Insights
+                  </p>
                   <p className="text-slate-400 text-xs leading-relaxed">
                     Build time improved by <span className="text-purple-400 font-semibold">18%</span> vs. last release.
                     Zero failed tests. Canary traffic at <span className="text-fuchsia-400 font-semibold">10%</span> — all healthy.

@@ -1,84 +1,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { CheckCircleIcon, ClockIcon } from "./Icons";
 
-/* ─── Liquid Background ─── */
-function LiquidBg() {
-  const blobRefs = useRef([]);
-
-  useEffect(() => {
-    // Slow organic drift — no rotation or scale change to avoid edge artifacts
-    const driftBlob = (blob, i) => {
-      const next = () => {
-        gsap.to(blob, {
-          x: gsap.utils.random(-140, 140),
-          y: gsap.utils.random(-90, 90),
-          duration: gsap.utils.random(12, 22),
-          ease: "sine.inOut",
-          onComplete: next,
-        });
-      };
-      gsap.delayedCall(i * 0.9, next);
-    };
-
-    blobRefs.current.forEach((blob, i) => {
-      if (!blob) return;
-      driftBlob(blob, i);
-    });
-
-    return () => {
-      blobRefs.current.forEach((b) => {
-        if (b) gsap.killTweensOf(b);
-      });
-    };
-  }, []);
-
-  // Vibrant blobs on white — positioned left-heavy like reference
-  const blobs = [
-    { w: 1050, h: 900,  top: '10%',  left: '-25%', color: 'rgba(147,51,234,0.38)',  blur: 160 },
-    { w: 800,  h: 720,  top: '-10%', left: '-10%', color: 'rgba(192,38,211,0.28)',  blur: 150 },
-    { w: 700,  h: 650,  top: '40%',  left: '-5%',  color: 'rgba(236,72,153,0.22)',  blur: 140 },
-    { w: 900,  h: 780,  top: '-20%', left: '30%',  color: 'rgba(124,58,237,0.20)',  blur: 155 },
-    { w: 600,  h: 550,  top: '45%',  left: '45%',  color: 'rgba(168,85,247,0.16)',  blur: 130 },
-    { w: 500,  h: 460,  top: '5%',   left: '60%',  color: 'rgba(216,180,254,0.30)', blur: 120 },
-  ]
-
-  return (
-    <div
-      className="absolute inset-0 overflow-hidden pointer-events-none select-none"
-      aria-hidden="true"
-    >
-      {/* Blobs layer — pure CSS blur, no distortion filter */}
-      <div style={{ position: "absolute", inset: 0 }}>
-        {blobs.map((b, i) => (
-          <div
-            key={i}
-            ref={(el) => (blobRefs.current[i] = el)}
-            style={{
-              position: "absolute",
-              width: b.w,
-              height: b.h,
-              top: b.top,
-              left: b.left,
-              background: `radial-gradient(ellipse at center, ${b.color} 0%, transparent 70%)`,
-              filter: `blur(${b.blur}px)`,
-              willChange: "transform",
-            }}
-          />
-        ))}
-      </div>
-
-      {/* White vignette — pulls edges back to white */}
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          background:
-            "radial-gradient(ellipse 85% 80% at 50% 50%, transparent 25%, rgba(255,255,255,0.55) 70%, rgba(255,255,255,0.90) 100%)",
-        }}
-      />
-    </div>
-  );
-}
 
 /* ─── Phone Mockup ─── */
 function PhoneMockup() {
@@ -172,13 +95,13 @@ function PhoneMockup() {
             <div className="space-y-2">
               {[
                 {
-                  icon: "✅",
+                  icon: <CheckCircleIcon className="w-3.5 h-3.5" />,
                   name: "main → prod",
                   status: "2.1s",
                   color: "bg-purple-400/30",
                 },
                 {
-                  icon: "⏳",
+                  icon: <ClockIcon className="w-3.5 h-3.5" />,
                   name: "feat/auth-v2",
                   status: "running",
                   color: "bg-pink-400/30",
@@ -272,7 +195,6 @@ export default function Hero() {
       ref={sectionRef}
       className="hero-gradient-bg min-h-screen flex flex-col items-center justify-start pt-16 pb-24 overflow-hidden"
     >
-      <LiquidBg />
 
       {/* Phone + floating cards container */}
       <div className="relative z-10 w-full max-w-4xl mx-auto flex justify-center pt-10 pb-4 px-6">
@@ -347,8 +269,9 @@ export default function Hero() {
         {/* Card: bottom-left deploy badge */}
         <div className="absolute left-[14%] bottom-[10%] z-30 animate-float-card1">
           <div className="bg-white/90 rounded-xl shadow-lg px-3 py-2 border border-gray-100">
-            <span className="text-purple-700 font-bold text-sm">
-              Deployed ✅
+            <span className="text-purple-700 font-bold text-sm inline-flex items-center gap-2">
+              <CheckCircleIcon className="w-4 h-4" />
+              Deployed
             </span>
           </div>
         </div>

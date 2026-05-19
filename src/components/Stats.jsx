@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { ChartIcon } from './Icons'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -23,7 +24,13 @@ function useCountUp(target, duration = 2) {
           n: target,
           duration,
           ease: 'power2.out',
-          onUpdate: () => setVal(Math.round(obj.n)),
+          onUpdate: () => {
+            if (target % 1 !== 0) {
+              setVal(parseFloat(obj.n.toFixed(2)))
+            } else {
+              setVal(Math.round(obj.n))
+            }
+          },
         })
       },
     })
@@ -52,24 +59,23 @@ export default function Stats() {
 
   return (
     <section id="dashboard" ref={sectionRef} className="py-24 px-6 relative overflow-hidden">
-      <div style={{ background: 'radial-gradient(ellipse 80% 50% at 50% 50%, rgba(168,85,247,0.07) 0%, transparent 70%)' }} className="absolute inset-0 pointer-events-none" />
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <div className="section-label mb-5">
-            <span>📊</span> By the numbers
+            <ChartIcon className="w-4 h-4" /> By the numbers
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-            Powering <span className="gradient-text">millions</span> of deploys
+            Powering <span className="text-purple-300">millions</span> of deploys
           </h2>
           <p className="text-slate-400 text-base max-w-xl mx-auto">
             Engineering teams worldwide trust DevFlow to ship faster, deploy smarter, and scale confidently.
           </p>
         </div>
 
-        <div className="glass rounded-3xl p-12 grid grid-cols-2 md:grid-cols-4 gap-10 divide-x-0 md:divide-x divide-white/5">
+        <div className="glass rounded-3xl p-12 grid grid-cols-2 md:grid-cols-4 gap-6 divide-x-0 md:divide-x divide-white/5">
           <StatItem prefix="" number={50} suffix="K+" label="Repositories Hosted" color="bg-purple-400" />
           <StatItem prefix="" number={2} suffix="M+" label="Deploys per Month" color="bg-pink-400" />
-          <StatItem prefix="" number={99} suffix=".99%" label="Uptime SLA" color="bg-sky-400" />
+          <StatItem prefix="" number={99.99} suffix="%" label="Uptime SLA" color="bg-sky-400" />
           <StatItem prefix="" number={180} suffix="+" label="Countries Supported" color="bg-amber-400" />
         </div>
       </div>

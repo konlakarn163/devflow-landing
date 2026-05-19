@@ -69,7 +69,7 @@ export default function Navbar() {
             <span
               className="font-extrabold text-black text-[15px] tracking-[0.15em] uppercase whitespace-nowrap overflow-hidden"
               style={{
-                width: scrolled ? "0px" : "82px",
+                width: scrolled ? "0px" : "90px",
                 opacity: scrolled ? 0 : 1,
                 transition:
                   "width 0.45s cubic-bezier(0.4,0,0.2,1), opacity 0.25s ease",
@@ -90,7 +90,7 @@ export default function Navbar() {
                 <a
                   key={link.label}
                   href={link.href}
-                  className={`nav-pill-link rounded-xl flex items-center gap-1.5 ${link.active ? "active" : ""}`}
+                  className={`nav-pill-link rounded-2xl flex items-center gap-1.5 ${link.active ? "active" : ""}`}
                 >
                   {link.label}
                 </a>
@@ -102,14 +102,13 @@ export default function Navbar() {
           <div className="hidden md:flex items-center shrink-0">
             <a
               href="#"
-              className="px-6 py-2.5 rounded-full text-sm font-semibold border"
+              className="px-6 py-2.5 rounded-full text-sm font-semibold text-white shadow-lg "
               style={{
-                color: scrolled ? "#fff" : "#111",
-                borderColor: scrolled
-                  ? "rgba(255,255,255,0.2)"
-                  : "rgba(0,0,0,0.15)",
-                transition:
-                  "color 0.4s ease, border-color 0.4s ease, background 0.2s ease",
+                background: "linear-gradient(135deg,#7c3aed,#a855f7)",
+                border: "1px solid rgba(168,85,247,0.45)",
+                boxShadow: scrolled
+                  ? "0 10px 30px rgba(124,58,237,0.25)"
+                  : "0 10px 24px rgba(168,85,247,0.18)",
               }}
             >
               Contact us

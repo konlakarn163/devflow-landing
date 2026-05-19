@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { SparklesIcon } from './Icons'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -76,15 +77,14 @@ export default function Pricing() {
 
   return (
     <section id="pricing" ref={sectionRef} className="py-28 px-6 relative overflow-hidden">
-      <div style={{ background: 'radial-gradient(ellipse 70% 50% at 70% 50%, rgba(168,85,247,0.06) 0%, transparent 70%)' }} className="absolute inset-0 pointer-events-none" />
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <div className="section-label mb-5">
-            <span>�</span> Simple pricing
+            <SparklesIcon className="w-4 h-4" /> Simple pricing
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
             Transparent plans,<br />
-            <span className="gradient-text">no surprises</span>
+            <span className="text-purple-300">no surprises</span>
           </h2>
           <p className="text-slate-400 text-base max-w-xl mx-auto">
             Start free. Scale as your team grows. Cancel any time.
@@ -103,8 +103,9 @@ export default function Pricing() {
               className={`pricing-card rounded-3xl p-8 flex flex-col ${plan.popular ? 'pricing-popular' : ''}`}
             >
               {plan.popular && (
-                <div className="inline-flex items-center self-start bg-linear-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full px-3 py-1 text-xs font-semibold text-purple-300 mb-4">
-                  ✦ Most Popular
+                <div className="inline-flex items-center self-start bg-white/[0.04] border border-purple-500/30 rounded-full px-3 py-1 text-xs font-semibold text-purple-300 mb-4">
+                  <SparklesIcon className="w-3.5 h-3.5 mr-1.5" />
+                  Most Popular
                 </div>
               )}
 

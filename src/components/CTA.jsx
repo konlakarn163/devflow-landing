@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { RocketIcon } from './Icons'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -25,23 +26,17 @@ export default function CTA() {
           ref={innerRef}
           className="relative rounded-3xl overflow-hidden p-12 md:p-16 text-center"
           style={{
-            background: 'linear-gradient(135deg, rgba(168,85,247,0.15) 0%, rgba(236,72,153,0.10) 50%, rgba(168,85,247,0.08) 100%)',
-            border: '1px solid rgba(168,85,247,0.25)',
-            boxShadow: '0 0 100px rgba(168,85,247,0.18)',
+            background: 'rgba(255,255,255,0.03)',
+            border: '1px solid rgba(255,255,255,0.08)',
+            boxShadow: '0 24px 80px rgba(0,0,0,0.35)',
           }}
         >
-          {/* BG blobs */}
-          <div className="absolute top-0 left-0 w-72 h-72 rounded-full blur-3xl opacity-20"
-            style={{ background: 'radial-gradient(circle, #a855f7, transparent)' }} />
-          <div className="absolute bottom-0 right-0 w-72 h-72 rounded-full blur-3xl opacity-15"
-            style={{ background: 'radial-gradient(circle, #ec4899, transparent)' }} />
-
           <div className="relative z-10">
             <div className="section-label mb-6 justify-center">
-              <span>🚀</span> Get started today
+              <RocketIcon className="w-4 h-4" /> Get started today
             </div>
             <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-5 leading-tight">
-              Ready to ship<br />code <span className="gradient-text">10× faster?</span>
+              Ready to ship<br />code <span className="text-purple-300">10× faster?</span>
             </h2>
             <p className="text-slate-300 text-lg max-w-lg mx-auto mb-10 leading-relaxed">
               Join 50,000+ engineering teams that use DevFlow to automate CI/CD,
