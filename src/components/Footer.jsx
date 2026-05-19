@@ -56,17 +56,10 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="border-t border-white/5 pt-8">
           <p className="text-slate-600 text-sm">
-            © 2026 DevFlow, Inc. All rights reserved.
+            © 2026 Konlakarn
           </p>
-          <div className="flex items-center gap-6">
-            <span className="flex items-center gap-1.5 text-slate-600 text-xs">
-              <span className="w-2 h-2 rounded-full bg-purple-400 animate-pulse inline-block" />
-              Platform status: operational
-            </span>
-            <span className="text-slate-600 text-xs">SOC 2 Type II · ISO 27001 · GDPR-ready</span>
-          </div>
         </div>
       </div>
     </footer>
