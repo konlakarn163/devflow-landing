@@ -328,7 +328,7 @@ export default function Hero() {
         {/* CTA buttons */}
         <div
           ref={ctaRef}
-          className="flex flex-col sm:flex-row gap-4 mt-8 justify-center"
+          className="flex flex-col sm:flex-row px-6 gap-4 mt-8 justify-center"
         >
           <a
             href="#"
