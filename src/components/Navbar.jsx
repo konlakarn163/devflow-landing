@@ -3,11 +3,11 @@ import { gsap } from "gsap";
 
 const NAV_LINKS = [
   { label: "Home", href: "#", active: true },
-  { label: "Product", href: "#features" },
-  { label: "Solutions", href: "#howitworks" },
+  { label: "Platform", href: "#features" },
+  { label: "Workflow", href: "#howitworks" },
   { label: "Pricing", href: "#pricing" },
   { label: "Docs", href: "#" },
-  { label: "Blog", href: "#" },
+  { label: "Customers", href: "#testimonials" },
 ];
 
 const SCROLL_THRESHOLD = 80;
@@ -111,7 +111,7 @@ export default function Navbar() {
                   : "0 10px 24px rgba(168,85,247,0.18)",
               }}
             >
-              Contact us
+              Book a demo
             </a>
           </div>
 
@@ -171,7 +171,7 @@ export default function Navbar() {
                   background: "linear-gradient(135deg,#7c3aed,#a855f7)",
                 }}
               >
-                Contact us
+                Book a demo
               </a>
             </div>
           </div>

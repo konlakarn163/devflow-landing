@@ -1,7 +1,7 @@
 const LINKS = {
-  Product: ['Features', 'CI/CD Pipelines', 'Deployments', 'Monitoring', 'API Gateway', 'Changelog'],
-  Company: ['About', 'Blog', 'Careers', 'Press', 'Partners'],
-  Resources: ['Documentation', 'Status Page', 'Security', 'Terms of Service'],
+  Platform: ['Features', 'Pipelines', 'Deployments', 'Monitoring', 'Security', 'Changelog'],
+  Company: ['About', 'Customers', 'Careers', 'Partners', 'Contact'],
+  Resources: ['Documentation', 'Status', 'API Reference', 'Security', 'Terms'],
 }
 
 export default function Footer() {
@@ -22,7 +22,7 @@ export default function Footer() {
               </span>
             </a>
             <p className="text-slate-500 text-sm leading-relaxed max-w-xs mb-6">
-              The modern software delivery platform for engineering teams. Ship faster, deploy smarter, scale confidently.
+              DevFlow is the release platform for modern engineering teams to plan, ship, and scale with confidence.
             </p>
             <div className="flex gap-3">
               {['twitter', 'linkedin', 'github', 'youtube'].map((s) => (
@@ -63,9 +63,9 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1.5 text-slate-600 text-xs">
               <span className="w-2 h-2 rounded-full bg-purple-400 animate-pulse inline-block" />
-              All systems operational
+              Platform status: operational
             </span>
-            <span className="text-slate-600 text-xs">SOC 2 Type II · ISO 27001 · GDPR Compliant</span>
+            <span className="text-slate-600 text-xs">SOC 2 Type II · ISO 27001 · GDPR-ready</span>
           </div>
         </div>
       </div>

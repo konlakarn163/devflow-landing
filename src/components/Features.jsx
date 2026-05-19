@@ -15,7 +15,7 @@ const FEATURES = [
     bg: 'bg-purple-500/10',
     accent: 'text-purple-400',
     title: 'CI/CD Pipelines',
-    desc: 'Automate build, test, and deploy in minutes. Ship to any cloud with zero config and full visibility into every stage.',
+    desc: 'Launch reliable pipelines in minutes with reusable templates, approvals, and full visibility across every stage.',
   },
   {
     icon: (
@@ -26,7 +26,7 @@ const FEATURES = [
     bg: 'bg-fuchsia-500/10',
     accent: 'text-fuchsia-400',
     title: 'Code Review',
-    desc: 'Streamline PR reviews with inline comments, AI-powered suggestions, and merge checks that enforce code quality.',
+    desc: 'Ship cleaner code with structured reviews, smart suggestions, and policy checks that protect your main branch.',
   },
   {
     icon: (
@@ -37,7 +37,7 @@ const FEATURES = [
     bg: 'bg-pink-500/10',
     accent: 'text-pink-400',
     title: 'API Monitoring',
-    desc: 'Real-time health checks, latency tracking, and alerting for all your APIs. Catch issues before your users do.',
+    desc: 'Track latency, error rates, and incidents in real time so teams can resolve issues before customers notice.',
   },
   {
     icon: (
@@ -48,7 +48,7 @@ const FEATURES = [
     bg: 'bg-amber-500/10',
     accent: 'text-amber-400',
     title: 'Deploy Automation',
-    desc: 'One-click deploys to AWS, GCP, or Azure. Blue/green, canary, and rollback strategies built in.',
+    desc: 'Deploy confidently to AWS, GCP, or Azure with built-in canary, blue/green, and instant rollback workflows.',
   },
   {
     icon: (
@@ -59,7 +59,7 @@ const FEATURES = [
     bg: 'bg-purple-500/10',
     accent: 'text-purple-300',
     title: 'Team Workspace',
-    desc: 'Role-based access, kanban boards, Sprint planning, and async stand-ups — everything for engineering collaboration.',
+    desc: 'Coordinate delivery in one workspace with role-based access, sprint planning, and async team collaboration tools.',
   },
   {
     icon: (
@@ -70,7 +70,7 @@ const FEATURES = [
     bg: 'bg-rose-500/10',
     accent: 'text-rose-400',
     title: 'Security Scanning',
-    desc: 'Automated SAST, dependency audits, and container scanning on every commit. Catch vulnerabilities before they ship.',
+    desc: 'Run SAST, dependency, and container scans on every commit to stop vulnerabilities before release day.',
   },
 ]
 
@@ -93,15 +93,12 @@ export default function Features() {
     <section id="features" ref={sectionRef} className="py-28 px-6 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <div className="section-label mb-5">
-            <ZapIcon className="w-4 h-4" /> Everything you need
-          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-5 leading-tight">
-            A complete software<br />
-            <span className="text-purple-300">delivery platform</span>
+            Everything your team needs<br />
+            <span className="text-purple-300">to deliver faster</span>
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
-            From pipelines to production, DevFlow brings all your developer tools into one powerful platform.
+            Plan, build, release, and monitor in one platform built for modern engineering teams.
           </p>
         </div>
 

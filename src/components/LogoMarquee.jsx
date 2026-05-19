@@ -42,7 +42,7 @@ export default function LogoMarquee() {
             >
               <img
                 src={src}
-                alt=""
+                alt="Customer logo"
                 draggable={false}
                 className="h-7 w-auto select-none"
                 style={{ filter: 'brightness(0) invert(1)', opacity: 0.75 }}

@@ -61,22 +61,20 @@ export default function Stats() {
     <section id="dashboard" ref={sectionRef} className="py-24 px-6 relative overflow-hidden">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <div className="section-label mb-5">
-            <ChartIcon className="w-4 h-4" /> By the numbers
-          </div>
+         
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-            Powering <span className="text-purple-300">millions</span> of deploys
+            Trusted by teams shipping at <span className="text-purple-300">global scale</span>
           </h2>
           <p className="text-slate-400 text-base max-w-xl mx-auto">
-            Engineering teams worldwide trust DevFlow to ship faster, deploy smarter, and scale confidently.
+            From startups to enterprises, teams rely on DevFlow to release quickly and run reliably.
           </p>
         </div>
 
         <div className="glass rounded-3xl p-12 grid grid-cols-2 md:grid-cols-4 gap-6 divide-x-0 md:divide-x divide-white/5">
-          <StatItem prefix="" number={50} suffix="K+" label="Repositories Hosted" color="bg-purple-400" />
-          <StatItem prefix="" number={2} suffix="M+" label="Deploys per Month" color="bg-pink-400" />
-          <StatItem prefix="" number={99.99} suffix="%" label="Uptime SLA" color="bg-sky-400" />
-          <StatItem prefix="" number={180} suffix="+" label="Countries Supported" color="bg-amber-400" />
+          <StatItem prefix="" number={50} suffix="K+" label="Projects Launched" color="bg-purple-400" />
+          <StatItem prefix="" number={2} suffix="M+" label="Automated Runs / Month" color="bg-pink-400" />
+          <StatItem prefix="" number={99} suffix="%" label="Platform Availability" color="bg-sky-400" />
+          <StatItem prefix="" number={180} suffix="+" label="Teams Worldwide" color="bg-amber-400" />
         </div>
       </div>
     </section>

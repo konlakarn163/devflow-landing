@@ -36,7 +36,7 @@ function PhoneMockup() {
             {/* App header */}
             <div className="flex items-center justify-between mb-4">
               <span className="text-purple-300/60 text-[10px] font-medium">
-                DevFlow Dashboard
+                Release Command Center
               </span>
               <div className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center">
                 <div className="w-3 h-3 rounded-full bg-white/60" />
@@ -46,17 +46,17 @@ function PhoneMockup() {
             {/* Pipeline status */}
             <div className="text-center mb-4">
               <p className="text-purple-300/60 text-[10px] mb-1">
-                Today's Deploys
+                Deploys Today
               </p>
               <p className="text-white font-bold text-2xl">47</p>
               <span className="text-purple-300 text-[10px] font-semibold">
-                ↓ 0 failures
+                0 failed releases
               </span>
             </div>
 
             {/* Stage tabs */}
             <div className="flex justify-center gap-2 mb-5">
-              {["CI", "CD", "Monitor", "Alerts"].map((a) => (
+              {["Plan", "Build", "Test", "Deploy"].map((a) => (
                 <div key={a} className="flex flex-col items-center gap-1">
                   <div className="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center">
                     <div className="w-3.5 h-3.5 rounded bg-purple-400/50" />
@@ -70,7 +70,7 @@ function PhoneMockup() {
             <div className="bg-white/10 rounded-2xl p-3 mb-3">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-white/60 text-[9px] font-semibold">
-                  Build History
+                  Pipeline Throughput
                 </span>
                 <span className="text-purple-300 text-[9px]">Last 7 days</span>
               </div>
@@ -102,8 +102,8 @@ function PhoneMockup() {
                 },
                 {
                   icon: <ClockIcon className="w-3.5 h-3.5" />,
-                  name: "feat/auth-v2",
-                  status: "running",
+                  name: "hotfix/login-timeout",
+                  status: "in progress",
                   color: "bg-pink-400/30",
                 },
               ].map((t, i) => (
@@ -210,9 +210,10 @@ export default function Hero() {
         >
           <div className="bg-white rounded-2xl shadow-xl px-4 py-3 min-w-32.5">
             <p className="text-gray-400 text-[10px] mb-0.5">Commits today</p>
+            <p className="text-gray-400 text-[10px] mb-0.5">Merges today</p>
             <p className="text-gray-900 font-bold text-xl">142</p>
             <span className="inline-block bg-purple-100 text-purple-600 text-[9px] font-bold px-2 py-0.5 rounded-full mt-1">
-              ↳ +18%
+              ↳ +22%
             </span>
           </div>
         </div>
@@ -223,7 +224,7 @@ export default function Hero() {
           className="absolute right-[2%] sm:right-[6%] top-[35%] z-10 animate-float-card2"
         >
           <div className="bg-white rounded-2xl shadow-xl px-4 py-3 min-w-35">
-            <p className="text-gray-400 text-[10px] mb-0.5">Build success</p>
+            <p className="text-gray-400 text-[10px] mb-0.5">Pipeline success</p>
             <p className="text-gray-900 font-bold text-xl">98.7%</p>
             <div className="flex items-end gap-0.5 mt-2 h-8">
               {[40, 70, 50, 85, 60, 90, 55].map((h, i) => (
@@ -262,7 +263,7 @@ export default function Hero() {
                 />
               </svg>
             </div>
-            <span className="text-gray-900 font-bold text-sm">+47 PRs</span>
+            <span className="text-gray-900 font-bold text-sm">+47 merges</span>
           </div>
         </div>
 
@@ -271,7 +272,7 @@ export default function Hero() {
           <div className="bg-white/90 rounded-xl shadow-lg px-3 py-2 border border-gray-100">
             <span className="text-purple-700 font-bold text-sm inline-flex items-center gap-2">
               <CheckCircleIcon className="w-4 h-4" />
-              Deployed
+              Live in production
             </span>
           </div>
         </div>
@@ -289,12 +290,12 @@ export default function Hero() {
         {/* Big heading — overlaps slightly with phone */}
         <div
           ref={headingRef}
-          className="relative text-center px-4 -mt-10 md:-mt-16 w-full"
+          className="relative text-center px-4 -mt-10 md:-mt-4 w-full"
         >
           <h1 className="font-extrabold tracking-tight leading-[0.92]">
             {/* Line 1 — purple gradient */}
             <span
-              className="hero-word block text-[clamp(52px,12vw,130px)] uppercase"
+              className="hero-word block text-[clamp(46px,12vw,90px)] uppercase"
               style={{
                 background:
                   "linear-gradient(135deg, #c084fc 0%, #f472b6 55%, #fb7185 100%)",
@@ -303,14 +304,14 @@ export default function Hero() {
                 backgroundClip: "text",
               }}
             >
-              Ship Faster.
+              Release Faster.
             </span>
             {/* Line 2 — dark on light bg */}
             <span
-              className="hero-word block text-[clamp(52px,12vw,130px)] uppercase"
+              className="hero-word block text-[clamp(46px,12vw,90px)] uppercase"
               style={{ color: "#0f0f1a" }}
             >
-              Build Smarter.
+              Scale Safer.
             </span>
           </h1>
         </div>
@@ -320,8 +321,8 @@ export default function Hero() {
           ref={subRef}
           className="text-gray-500 text-base md:text-lg text-center px-6 mt-5 leading-relaxed"
         >
-          A complete platform for automating CI/CD pipelines, monitoring
-          deployments, and shipping code at scale.
+          One command center to automate delivery, monitor performance,
+          and keep every release reliable.
         </p>
 
         {/* CTA buttons */}
@@ -334,7 +335,7 @@ export default function Hero() {
             className="px-8 py-3.5 rounded-full font-semibold text-base text-white inline-flex items-center gap-2 shadow-lg transition-all duration-300 hover:-translate-y-1"
             style={{ background: "linear-gradient(135deg, #7c3aed, #a855f7)" }}
           >
-            Get started
+            Start free trial
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -358,7 +359,7 @@ export default function Hero() {
               border: "1px solid rgba(15,15,26,0.12)",
             }}
           >
-            View demo
+            Watch demo
           </a>
         </div>
       </div>

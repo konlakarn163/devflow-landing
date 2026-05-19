@@ -8,22 +8,22 @@ gsap.registerPlugin(ScrollTrigger)
 const STEPS = [
   {
     no: '01',
-    title: 'Connect your repository',
-    desc: 'Link GitHub, GitLab, or Bitbucket in seconds. DevFlow auto-detects your stack and suggests pipeline templates.',
+    title: 'Connect your codebase',
+    desc: 'Connect GitHub, GitLab, or Bitbucket in seconds. DevFlow auto-detects your stack and recommends best-practice templates.',
     color: 'text-purple-400',
     bg: 'bg-purple-400/10',
   },
   {
     no: '02',
-    title: 'Configure your pipelines',
-    desc: 'Use YAML or our visual editor to define build, test, and deploy stages. No DevOps expertise required.',
+    title: 'Define release workflows',
+    desc: 'Configure build, test, approval, and deploy stages with YAML or a visual editor that your whole team can follow.',
     color: 'text-fuchsia-400',
     bg: 'bg-fuchsia-400/10',
   },
   {
     no: '03',
-    title: 'Ship with confidence',
-    desc: 'Deploy to any cloud with built-in rollback, canary releases, and real-time monitoring from a single dashboard.',
+    title: 'Ship and monitor instantly',
+    desc: 'Release to any cloud with canary rollouts, automatic rollback, and real-time health monitoring in one view.',
     color: 'text-pink-400',
     bg: 'bg-pink-400/10',
   },
@@ -58,15 +58,13 @@ export default function HowItWorks() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left */}
           <div>
-            <div className="section-label mb-6">
-              <WrenchIcon className="w-4 h-4" /> How it works
-            </div>
+           
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-5 leading-tight">
-              Up and running<br />
-              <span className="text-purple-300">in minutes</span>
+              Go from commit to production<br />
+              <span className="text-purple-300">without the chaos</span>
             </h2>
             <p className="text-slate-400 text-base mb-10 leading-relaxed max-w-md">
-              No lengthy onboarding. No complex setup. Connect your repo, configure your pipeline, and deploy to production in a single afternoon.
+              Skip complex setup and long onboarding. Connect your repo, define your workflow, and release confidently on day one.
             </p>
 
             <div className="space-y-6">
@@ -95,16 +93,16 @@ export default function HowItWorks() {
                 <div className="w-3 h-3 rounded-full bg-red-500/60" />
                 <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
                 <div className="w-3 h-3 rounded-full bg-green-500/60" />
-                <span className="flex-1 text-center text-slate-600 text-xs">Pipeline: main → production</span>
+                <span className="flex-1 text-center text-slate-600 text-xs">Workflow: main → production</span>
               </div>
               <div className="p-6 space-y-4">
                 {/* Big metric */}
                 <div className="text-center py-4">
-                  <p className="text-slate-500 text-xs mb-1 uppercase tracking-widest">Last Deploy</p>
+                  <p className="text-slate-500 text-xs mb-1 uppercase tracking-widest">Latest Release</p>
                   <p className="text-4xl font-extrabold stat-num">2.4s</p>
                   <span className="text-purple-400 text-sm font-semibold inline-flex items-center justify-center gap-2">
                     <CheckCircleIcon className="w-4 h-4" />
-                    Deployed to prod — v3.8.1
+                    Production live — v3.8.1
                   </span>
                 </div>
 
@@ -113,8 +111,8 @@ export default function HowItWorks() {
                   {[
                     { label: 'Checkout', val: 100, color: 'bg-purple-500' },
                     { label: 'Build', val: 100, color: 'bg-purple-500' },
-                    { label: 'Test (142 passed)', val: 100, color: 'bg-fuchsia-500' },
-                    { label: 'Deploy', val: 85, color: 'bg-pink-500' },
+                    { label: 'Test (142 checks passed)', val: 100, color: 'bg-fuchsia-500' },
+                    { label: 'Progressive rollout', val: 85, color: 'bg-pink-500' },
                   ].map((item, i) => (
                     <div key={i}>
                       <div className="flex justify-between text-xs text-slate-400 mb-1.5">
@@ -135,11 +133,11 @@ export default function HowItWorks() {
                 <div className="glass rounded-xl p-3 border border-white/6">
                   <p className="text-slate-400 text-xs font-semibold mb-2 inline-flex items-center gap-2">
                     <SparklesIcon className="w-4 h-4 text-purple-400" />
-                    AI Insights
+                    Release Insights
                   </p>
                   <p className="text-slate-400 text-xs leading-relaxed">
-                    Build time improved by <span className="text-purple-400 font-semibold">18%</span> vs. last release.
-                    Zero failed tests. Canary traffic at <span className="text-fuchsia-400 font-semibold">10%</span> — all healthy.
+                    Build time improved by <span className="text-purple-400 font-semibold">18%</span> compared to the previous release.
+                    Zero failed tests. Canary traffic at <span className="text-fuchsia-400 font-semibold">10%</span> and healthy.
                   </p>
                 </div>
               </div>

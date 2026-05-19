@@ -213,6 +213,36 @@ body {
   transform: translateY(-2px);
 }
 
+.cta-grid-bg {
+  position: relative;
+  isolation: isolate;
+  background-color: #090b14;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(124,58,237,0.01) 0%, rgba(9,11,20,0.92) 70%);
+  background-size: 100px 100px, 100px 100px, 100% 100%;
+  background-position: center;
+}
+
+.cta-grid-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(62% 46% at 50% 100%, rgba(168,85,247,0.30) 0%, rgba(168,85,247,0.12) 38%, rgba(8,12,24,0) 78%);
+}
+
+.cta-grid-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(8,12,24,0.12) 0%, rgba(8,12,24,0.45) 100%);
+}
+
 .feature-card {
   background: #0f1118;
   border: 1px solid rgba(255,255,255,0.06);
@@ -226,20 +256,21 @@ body {
 }
 
 .pricing-card {
-  background: #0f1118;
+  background: rgba(20,20,32,0.48);
   border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.4);
   transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
 }
 .pricing-popular {
-  background: #131624;
-  border: 1px solid rgba(168,85,247,0.45);
-  box-shadow: 0 24px 80px rgba(0,0,0,0.28);
+  background: #fafbfc;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.32);
   transform: scale(1.02);
 }
 .pricing-card:not(.pricing-popular):hover {
-  border-color: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.14);
   transform: translateY(-4px);
-  box-shadow: 0 18px 50px rgba(0,0,0,0.2);
+  box-shadow: 0 22px 58px rgba(0,0,0,0.42);
 }
 
 .logo-item {
@@ -350,6 +381,7 @@ body {
   opacity: 0.12;
   filter: blur(3px);
   transform: scale(0.65);
+  backface-visibility: hidden;
 }
 
 .testimonial-swiper .swiper-slide-prev,
@@ -372,23 +404,28 @@ body {
   background: rgba(20,20,32,0.48);
   border: 1px solid rgba(255,255,255,0.06);
   box-shadow: 0 18px 50px rgba(0,0,0,0.4);
+  transition: background-color 0.45s ease, border-color 0.45s ease, box-shadow 0.45s ease;
 }
 
 .testimonial-text {
   color: rgba(255,255,255,0.58);
+  transition: color 0.4s ease;
 }
 
 .testimonial-name {
   color: rgba(255,255,255,0.85);
+  transition: color 0.4s ease;
 }
 
 .testimonial-role {
   color: rgba(255,255,255,0.38);
+  transition: color 0.4s ease;
 }
 
 .testimonial-quote-icon {
   color: rgba(255,215,0,0.7);
   flex-shrink: 0;
+  transition: color 0.4s ease;
 }
 
 .testimonial-avatar {
@@ -397,6 +434,7 @@ body {
 
 .testimonial-stars {
   opacity: 0.8;
+  transition: opacity 0.35s ease;
 }
 
 .testimonial-swiper .swiper-slide-active .testimonial-slide-card {
@@ -411,7 +449,6 @@ body {
 
 .testimonial-swiper .swiper-slide-active .testimonial-name {
   color: #1a202c;
-  font-weight: 700;
 }
 
 .testimonial-swiper .swiper-slide-active .testimonial-role {
@@ -459,26 +496,6 @@ body {
   right: -0.5rem;
 }
 
-.testimonial-swiper .swiper-pagination {
-  bottom: 0 !important;
-}
-
-.testimonial-swiper .swiper-pagination-bullet {
-  width: 0.6rem;
-  height: 0.6rem;
-  background: rgba(255,255,255,0.32);
-  opacity: 1;
-  transition: all 0.3s ease;
-}
-
-.testimonial-swiper .swiper-pagination-bullet:hover {
-  background: rgba(255,255,255,0.5);
-}
-
-.testimonial-swiper .swiper-pagination-bullet-active {
-  background: #fff;
-  width: 0.85rem;
-}
 
 @media (max-width: 767px) {
   .testimonial-carousel-shell::before,
