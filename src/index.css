@@ -39,20 +39,15 @@
 .animate-float-card2 { animation: floatCard2 5.5s ease-in-out 0.5s infinite; }
 .animate-float-card3 { animation: floatCard3 4.8s ease-in-out 1s infinite; }
 
-/* Marquee fade mask */
 .marquee-mask {
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
 }
 
-/* Hero gradient background — light base; dynamic blobs injected by LiquidBg component */
 .hero-gradient-bg {
-  background: #ffffff;
+  background: #F5F5F5;
   position: relative;
 }
-
-/* Navbar glass light */
-/* Navbar — transparent at top */
 .navbar-transparent {
   background: transparent;
   backdrop-filter: none;
@@ -78,7 +73,6 @@
 }
 
 
-/* Nav pill container — light glass when at top */
 .nav-pill {
   background: rgba(255,255,255,0.45);
   backdrop-filter: blur(20px);

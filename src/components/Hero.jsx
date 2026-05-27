@@ -196,21 +196,19 @@ export default function Hero() {
       className="hero-gradient-bg min-h-screen flex flex-col items-center justify-start pt-16 pb-24 overflow-hidden"
     >
 
-      {/* Phone + floating cards container */}
       <div className="relative z-10 w-full max-w-4xl mx-auto flex justify-center pt-10 pb-4 px-6">
         {/* Phone */}
         <div ref={phoneRef} className="relative z-20 animate-float">
           <PhoneMockup />
         </div>
 
-        {/* Card: Deploy velocity - left */}
         <div
           ref={card1Ref}
           className="absolute left-[2%] sm:left-[8%] top-[18%] z-10 animate-float-card1"
         >
           <div className="bg-white rounded-2xl shadow-xl px-4 py-3 min-w-32.5">
-            <p className="text-gray-400 text-[10px] mb-0.5">Commits today</p>
-            <p className="text-gray-400 text-[10px] mb-0.5">Merges today</p>
+            <p className="text-gray-500 text-[10px] mb-0.5">Commits today</p>
+            <p className="text-gray-500 text-[10px] mb-0.5">Merges today</p>
             <p className="text-gray-900 font-bold text-xl">142</p>
             <span className="inline-block bg-purple-100 text-purple-600 text-[9px] font-bold px-2 py-0.5 rounded-full mt-1">
               ↳ +22%
@@ -224,7 +222,7 @@ export default function Hero() {
           className="absolute right-[2%] sm:right-[6%] top-[35%] z-10 animate-float-card2"
         >
           <div className="bg-white rounded-2xl shadow-xl px-4 py-3 min-w-35">
-            <p className="text-gray-400 text-[10px] mb-0.5">Pipeline success</p>
+            <p className="text-gray-500 text-[10px] mb-0.5">Pipeline success</p>
             <p className="text-gray-900 font-bold text-xl">98.7%</p>
             <div className="flex items-end gap-0.5 mt-2 h-8">
               {[40, 70, 50, 85, 60, 90, 55].map((h, i) => (
@@ -282,7 +280,7 @@ export default function Hero() {
         className="z-20 w-full pb-6"
         style={{
           background:
-            "linear-gradient(to bottom, transparent 0%, #ffffff 22%, #ffffff 100%)",
+            "linear-gradient(to bottom, transparent 0%, #F5F5F5 22%, #F5F5F5 100%)",
           paddingTop: "5rem",
           marginTop: "-5rem",
         }}
